@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link rel="icon" href="icons/display.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1 class="heading">Tic Tac Toe</h1>
+    </header>
+    <div id="computerPlayer">
+        <button class="option" id="computer">Play Against Computer</button>
+        <button class="option" id="player">Play with a Friend</button>
+    </div>
+    <div id='gameBoard' style="display: none">
+        <div id="grid" >
+            <div class="grid-item" id="r0c0"></div>
+            <div class="grid-item" id="r0c1"></div>
+            <div class="grid-item" id="r0c2"></div>
+            <div class="grid-item" id="r1c0"></div>
+            <div class="grid-item" id="r1c1"></div>
+            <div class="grid-item" id="r1c2"></div>
+            <div class="grid-item" id="r2c0"></div>
+            <div class="grid-item" id="r2c1"></div>
+            <div class="grid-item" id="r2c2"></div>
+        </div>
+    </div>
+    <div id="congrats">
+        <h1 class="winnerContent"></h1>
+        <button class="restart">Play Again</button>
+    </div>
+    <script src="javascript/tictactoe.js"></script>
+</body>
+</html>

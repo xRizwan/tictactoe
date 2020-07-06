@@ -1,0 +1,57 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to right, rgb(151, 150, 150),rgb(107, 106, 106));
+}
+
+#grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 10em 10em 10em;
+}
+
+.grid-item {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 10%;
+    background-color: dodgerblue;
+    height: 10rem;
+    font-size: 9em;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.grid-item:hover {
+    cursor: pointer;
+}
+
+.heading {
+    text-align: center;
+}
+
+#congrats {
+    display: none;
+    text-align: center;
+    color: blanchedalmond;
+}
+
+.restart, .option {
+    width: 10em;
+    font-size: 2em;
+    height: 4em;
+    outline: none;
+    border-radius: 20%;
+    background: blanchedalmond;
+}
+
+.restart:active{
+    transform: translateY(10px);
+}
+
+.option:active {
+    background: rgba(170, 125, 58, 0.89);
+    transform: translateY(10px);
+}
+
+#computerPlayer {
+    text-align: center;
+}
+
