@@ -372,6 +372,8 @@ function minimax(board, depth, isMaximizing){
         // add an onclick handler to each box in the grid(board)X
     board.forEach((element) => {
         element.addEventListener("click", (e) => {
+            let mainpath = e.path || (e.composedPath && e.composedPath());;
+            
             // if winner is true then don't let user add symbols on the block
             if (winner){
                 return;
@@ -379,10 +381,10 @@ function minimax(board, depth, isMaximizing){
 
             else{
                 // get the rowNumber and columnNumber of the event
-                let rowCol = e.path[0].id.match(/\d+/g); // get all the numbers only
+                let rowCol = mainpath[0].id.match(/\d+/g); // get all the numbers only
                 let row = rowCol[0]; // first number is the row
                 let column = rowCol[1] // second number is the column
-                let currentBox = e.path[0]; // current box is the first element in the array
+                let currentBox = mainpath[0]; // current box is the first element in the array
 
                 // if box already has a symbol dont let the player change it
                 if (Gameboard[row][column] != ''){
